@@ -20,6 +20,12 @@ app.get('/notes', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/notes.html'))
 })
 
+app.get('/api/notes', (req, res) => {
+    res.json(db) // responds to GET request with json data from database filepath
+    console.info(`${req.method} request received to get notes`); // to check console log in terminal
+    console.log(db); // to check json data from the console log in terminal
+  });
+
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/index.html'))
   })
@@ -44,3 +50,9 @@ app.listen(PORT, () => {
 // see if modularization is needed, probably not when there's only two routes
 
 // add wildcard to index route placed after the other routes due to linearity
+
+// need get / post reqs for /api/notes for db.json
+
+// have to get unique id's for post requests.............
+// which then relates to...
+// DELETE /api/notes/:id should receive a query parameter that contains the id of a note to delete. To delete a note, you'll need to read all notes from the db.json file, remove the note with the given id property, and then rewrite the notes to the db.json file.
