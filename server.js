@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require('path'); // to get path directories
 
 const app = express();
 
@@ -10,6 +11,18 @@ app.use(express.json()); // middleware to parse json data
 app.use(express.urlencoded({ extended: true })); // middleware to parse URL-encoded data
 
 app.use(express.static('public')); // middleware to GET the static files without having to write a GET request
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/index.html'))
+  })
+
+app.get('/notes', (req, res) => {
+  res.sendFile(path.join(__dirname, '/public/notes.html'))
+})
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/index.html'))
+  })
 
 app.listen(PORT, () => {
     console.log(`Note Taker listening at http://localhost:${PORT}`);
