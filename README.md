@@ -18,6 +18,8 @@
   
   For running the code locally, node.js, express.js and npm package uuid. A server is required to run the application over the internet.
 
+  Note: Had to download from [https://fontawesome.com/download](https://fontawesome.com/download) to get Font Awesome 6 "Free for Web" to work due to CORS issue when trying to use the website link for Font Awesome.
+
   # Usage
   
   ![Image of deployed application](rd7.jpg)
@@ -25,8 +27,6 @@
   # Deployed Application
 
   Link to deployed application:  [https://rocky-mountain-97867.herokuapp.com/](https://rocky-mountain-97867.herokuapp.com/)
-
-  Note: The webpage is affected on Google Chrome due to CORS policy but it works fine on Microsoft Edge.
 
   # Tests
   
