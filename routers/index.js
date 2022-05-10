@@ -1,3 +1,4 @@
+// index for handling all routers
 const express = require('express');
 
 const notesRouter = require('./notes');
