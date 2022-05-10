@@ -10,7 +10,7 @@
   
   - [Installation](#installation)
   - [Usage](#usage)
-  
+  - [Deployed Application](#deployed-application)
   - [Tests](#tests)
   - [Questions](#questions)
 
@@ -22,8 +22,11 @@
   
   ![Image of deployed application](rd7.jpg)
   
-  
+  # Deployed Application
 
+  Link to deployed application:  [https://rocky-mountain-97867.herokuapp.com/](https://rocky-mountain-97867.herokuapp.com/)
+
+  Note: The webpage is affected on Google Chrome due to CORS policy but it works fine on Microsoft Edge.
 
   # Tests
   
